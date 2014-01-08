@@ -1,0 +1,13 @@
+Curses for luajit.
+
+To build pdcurses.dll get mingw and run "pdcurses_src/win32a/buildx??.bat"
+
+The example will make a non blocking console with features like history, some unfinished autocomplete, and some other unfinished things like handling left and right keys while holding ctrl.
+
+It's unfortunately a bit overwhelming (which I don't think examples should be) so this should be changed later. It was just ported from another project of mine.
+
+There is an extra function added called freeconsole() which will just hide the original console. It only does something on windows.
+
+I've included the source from http://www.projectpluto.com/win32a.htm
+
+There are some tiny modifications made to make it work better with non blocking mode. (mainly just remoinvg Sleep so it would run as fast as it can)
